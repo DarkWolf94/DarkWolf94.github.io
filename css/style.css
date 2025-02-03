@@ -100,7 +100,7 @@
   --scale-3:1.953rem;       /* 31px */
   --scale-4:2.441rem;       /* 39px */
   --scale-5:3.052rem;       /* 49px */
-  
+
   /* Spacing units */
   --spacing-xs:0.5rem;      /* 8px */
   --spacing-s:1rem;         /* 16px */
@@ -237,7 +237,7 @@ a:hover {
   .avatar--rounded {
 	border-radius: 50%;
   }
-  
+
   /* Modifier for slightly rounded corners */
   .avatar--soft {
 	border-radius: 0.5rem;   /* 8px rounded corners */
@@ -246,7 +246,7 @@ a:hover {
 /* Theme System
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Light theme is default above */
-  
+
 /* Dark theme */
 :root.theme-dark {
 	color-scheme:dark;
@@ -379,4 +379,296 @@ ul li {
 	font-weight:800;
 	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot');
 	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.svg#OpenSans') format('svg');
+}
+/* Global Styles */
+:root {
+	--neon-blue: #00eaff;
+	--dark-bg: #0a0f1e;
+	--light-gray: #e0e0e0;
+	--button-glow: #00eaff;
+	--glass: rgba(255, 255, 255, 0.1);
+	--border-glass: rgba(255, 255, 255, 0.3);
+}
+
+body {
+	background: radial-gradient(circle, #0a0f1e, #050a13);
+	color: var(--light-gray);
+	font-family: 'Orbitron', sans-serif;
+	text-align: center;
+}
+
+/* Avatar with Neon Glow */
+.avatar {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	object-fit: cover;
+	background: var(--glass);
+	box-shadow: 0px 0px 10px var(--neon-blue);
+	transition: transform 0.3s ease-in-out;
+}
+.avatar:hover {
+	transform: scale(1.1);
+}
+
+/* Title Glitch Effect */
+.glitch {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: var(--neon-blue);
+	text-shadow: 0px 0px 5px var(--neon-blue), 0px 0px 15px var(--neon-blue);
+	animation: glitch 1.5s infinite alternate;
+}
+
+/* Glitch Keyframes */
+@keyframes glitch {
+	0% { text-shadow: 0px 0px 5px var(--neon-blue), 0px 0px 15px var(--neon-blue); }
+	100% { text-shadow: 0px 0px 10px var(--neon-blue), 0px 0px 25px var(--neon-blue); }
+}
+
+/* Futuristic Glass Buttons */
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20rem;
+	min-height: 3rem;
+	padding: 0.75rem;
+	font-size: 1.2rem;
+	font-weight: 700;
+	background: var(--glass);
+	color: var(--neon-blue);
+	border: 2px solid var(--border-glass);
+	border-radius: 10px;
+	backdrop-filter: blur(10px);
+	box-shadow: 0px 0px 10px var(--neon-blue);
+	text-decoration: none;
+	margin: 10px auto;
+	transition: all 0.3s ease-in-out;
+}
+.button:hover {
+	background: var(--neon-blue);
+	color: #000;
+	box-shadow: 0px 0px 20px var(--neon-blue);
+	transform: scale(1.05);
+}
+
+/* Icons */
+.icon {
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-right: 0.5rem;
+}
+
+/* Footer */
+footer {
+	margin-top: 2rem;
+	font-size: 0.9rem;
+	color: var(--neon-blue);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+	.glitch {
+		font-size: 2rem;
+	}
+	.button {
+		width: 16rem;
+		font-size: 1rem;
+	}
+}
+/* Circuit Background Animation */
+@keyframes pulse-circuit {
+	0% { background-position: 0 0; }
+	50% { background-position: -50px -50px; }
+	100% { background-position: 0 0; }
+}
+
+body {
+	background: url('images/circuit-pattern.png'); /* Replace with your circuit image */
+	background-size: cover;
+	animation: pulse-circuit 5s infinite alternate linear;
+}
+
+/* Neon Framed Container */
+.container {
+	max-width: 800px;
+	margin: auto;
+	padding: 2rem;
+	background: rgba(10, 15, 30, 0.85); /* Glass effect */
+	border: 4px solid var(--neon-blue);
+	box-shadow: 0 0 20px var(--neon-blue);
+	border-radius: 15px;
+	backdrop-filter: blur(10px);
+	animation: neon-pulse 1.5s infinite alternate;
+}
+
+/* Pulsing Neon Animation */
+@keyframes neon-pulse {
+	0% { box-shadow: 0 0 10px var(--neon-blue); }
+	100% { box-shadow: 0 0 20px var(--neon-blue); }
+}
+
+/* 🔹 Futuristic Holographic Background */
+body {
+	background: radial-gradient(circle at center, rgba(10, 10, 20, 0.95) 10%, rgba(5, 5, 15, 1) 50%, black 100%);
+	color: #00eaff;
+	font-family: 'Orbitron', sans-serif;
+	overflow: hidden;
+}
+
+/* 🔹 Animated Circuit Board Overlay */
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('images/circuit-animated.gif'); /* Subtle electric flow effect */
+	opacity: 0.15;
+	animation: flicker 2s infinite alternate;
+}
+
+/* 🔹 CRT Flicker & Scanlines */
+body::after {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.05) 50%, rgba(255, 255, 255, 0.02) 50%);
+	background-size: 100% 4px;
+	opacity: 0.2;
+	pointer-events: none;
+	animation: scanlines 0.3s infinite linear;
+}
+
+@keyframes scanlines {
+	0% { background-position: 0 0; }
+	100% { background-position: 0 4px; }
+}
+
+/* 🔹 Glassmorphic Neon Container */
+.container {
+	max-width: 850px;
+	margin: auto;
+	padding: 2rem;
+	background: rgba(15, 15, 30, 0.8);
+	border: 3px solid #00eaff;
+	border-radius: 20px;
+	box-shadow: 0 0 30px #00eaff;
+	backdrop-filter: blur(12px);
+	animation: pulseGlow 1.5s infinite alternate;
+	transition: transform 0.3s ease-in-out;
+}
+
+/* 🔹 3D Floating Effect */
+.container:hover {
+	transform: perspective(1000px) rotateY(5deg) scale(1.02);
+}
+
+@keyframes pulseGlow {
+	0% { box-shadow: 0 0 10px #00eaff; }
+	100% { box-shadow: 0 0 40px #00eaff; }
+}
+
+/* 🔹 Glitching Holographic Title */
+h1.glitch {
+	font-size: 3rem;
+	text-align: center;
+	position: relative;
+	color: #00eaff;
+	text-shadow: 0 0 10px #00eaff, 0 0 30px #00eaff;
+	animation: glitchEffect 1.2s infinite alternate;
+	cursor: pointer;
+}
+
+@keyframes glitchEffect {
+	0% { text-shadow: 0 0 10px #00eaff; transform: skewX(0); }
+	50% { text-shadow: -2px 0 10px #ff00ff, 2px 0 20px #ff00ff; transform: skewX(8deg); }
+	100% { text-shadow: 0 0 10px #00eaff; transform: skewX(0); }
+}
+
+/* 🔹 Hologram Title Hack Effect */
+h1.glitch:active {
+	animation: hackGlitch 0.8s ease-out;
+}
+
+@keyframes hackGlitch {
+	0% { text-shadow: 0 0 20px #ff00ff, 0 0 50px #ff00ff; }
+	100% { text-shadow: 0 0 10px #00eaff; }
+}
+
+/* 🔹 Cyberpunk Neon Buttons */
+.button-glow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	padding: 12px 20px;
+	border: 2px solid #00eaff;
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+	box-shadow: 0 0 20px #00eaff;
+	color: #00eaff;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: all 0.3s ease-in-out;
+	position: relative;
+	overflow: hidden;
+}
+
+/* 🔹 Glitch Hover Effect */
+.button-glow:hover {
+	background: #00eaff;
+	color: black;
+	box-shadow: 0 0 40px #00eaff;
+	transform: scale(1.1);
+}
+
+.button-glow::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+	transition: all 0.5s ease-in-out;
+}
+
+.button-glow:hover::after {
+	left: 100%;
+}
+
+/* 🔹 Footer Neon Glow */
+footer {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 0.9rem;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+footer a {
+	color: #00eaff;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+}
+
+footer a:hover {
+	text-shadow: 0 0 10px #00eaff;
+}
+.white-icon {
+	filter: brightness(0) invert(1); /* Makes dark icons white */
+}
+.title {
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #0ff; /* Neon Cyan */
+	text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px rgba(0, 255, 255, 0.8);
+	letter-spacing: 2px;
+	text-transform: uppercase;
 }
