@@ -1,386 +1,4 @@
-/*
-* LittleLink
-* https://littlelink.io
-* Free to use under the MIT license
-* http://www.opensource.org/licenses/mit-license.php
-*/
-
-/* Base Typography Settings
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-:root {
-	font-size:16px;
-}
-
-/* Grid
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .container {
-	position:relative;
-	width:100%;
-	max-width:37.5rem;     				/* 600px */
-    text-align:center;
-	margin:0 auto;
-	padding:3rem 1.25rem 0 1.25rem;
-	box-sizing:border-box;
-}
-.container-left {
-	position:relative;
-	width:100%;
-	max-width:37.5rem;
-	text-align:left;
-	margin:0 auto;
-	padding:0 1.25rem;
-	box-sizing:border-box;
-}
-.container-left p {
-	margin-bottom: 1rem;  				/* 16px space between paragraphs */
-  }
-.column {
-	position:center;
-	width:100%;
-	float:center;
-	box-sizing:border-box;
-}
-/* For devices larger than 400px */
-  @media (min-width:25rem) {            /* 400px */
-    .container {
-	width:85%;
-	padding-left:0;
-	padding-right:0;
-}
-}/* For devices larger than 550px */
-  @media (min-width:34.375rem) {        /* 550px */
-    .container {
-	width:80%;
-}
-.column,.columns {
-	margin-left:0;
-}
-.column:first-child,.columns:first-child {
-	margin-left:0;
-}
-}
-
-/* Base Styles
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  body {
-	margin:0;
-	padding:0;
-	background-color:#ffffff;
-	color:#1a1a1a;
-	font-family:"Open Sans",system-ui;
-	font-size:1.125rem;     				/* 18px */
-    font-weight:400;
-	line-height:1.6;
-}
-
-/* Typography
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  h1 {
-	margin:0 0 0.5rem 0;
-	font-size:3rem;         		/* 48px */
-    font-weight:800;
-	line-height:1;
-	letter-spacing:0;
-	word-wrap:break-word;
-	overflow-wrap:break-word;
-	hyphens:auto;           		/* Delete this to remove automatic hyphen on line break */
-}
-.container p {
-	margin:0 0 2rem 0;
-}
-
-/* Base Typography Settings
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Base size - 16px browser default */
-:root {
-  font-size:16px;           /* Using a 1.25 modular scale for typography */
-  --scale-0:1rem;           /* 16px */
-  --scale-1:1.25rem;        /* 20px */
-  --scale-2:1.563rem;       /* 25px */
-  --scale-3:1.953rem;       /* 31px */
-  --scale-4:2.441rem;       /* 39px */
-  --scale-5:3.052rem;       /* 49px */
-
-  /* Spacing units */
-  --spacing-xs:0.5rem;      /* 8px */
-  --spacing-s:1rem;         /* 16px */
-  --spacing-m:1.5rem;       /* 24px */
-  --spacing-l:2rem;         /* 32px */
-  --spacing-xl:3rem;        /* 48px */
-  --spacing-xxl:4rem;       /* 64px */
-}
-
-/* Avatar */
-.avatar {
-	width: 8rem;             /* 128px */
-	height: 8rem;
-	border-radius: 50%;
-	object-fit: cover;
-	background-position: center;
-	margin-bottom: var(--spacing-l);
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-  }
-
-/* Typography Scale */
-h1 {
-	margin:0 0 var(--spacing-m) 0;
-	font-size:var(--scale-5);           /* ~49px */
-  	font-weight:800;
-	line-height:1.1;
-	letter-spacing:-0.02em;
-	word-wrap:break-word;
-	overflow-wrap:break-word;
-}
-body {
-	font-size:var(--scale-1);           /* 20px */
-  	line-height:1.6;
-}
-.container p {
-	margin:0 0 var(--spacing-xl) 0;
-	font-size:var(--scale-1);
-	line-height:1.6;
-}
-
-/* Container spacing */
-.container {
-	padding:var(--spacing-xl) var(--spacing-m) 0 var(--spacing-m);
-	text-align:center;
-}
-
-/* Footer */
-footer {
-	margin:var(--spacing-xxl) 0;            /* 4rem (64px) top and bottom */
-    font-size:var(--scale-0);
-}
-
-/* Responsive adjustments */
-@media (max-width:34.375rem) {              /* 550px */
-  h1 {
-	font-size:var(--scale-4);
-}
-body {
-	font-size:var(--scale-0);
-}
-.container p {
-	font-size:var(--scale-0);
-}
-.avatar {
-	margin-bottom:var(--spacing-m);
-}
-footer {
-	margin:var(--spacing-xl) 0;         	/* 3rem (48px) top and bottom */
-}
-}
-
-/* Links
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  a {
-	color:#2457F5;
-	text-decoration:underline;
-}
-a:hover {
-	color:#083BDA;
-}
-
-/* Buttons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button,button {
-	display:inline-flex;
-	align-items:center;
-	justify-content:center;
-	width:18.75rem;             	/* 300px */
- 	min-height:3rem;                /* 48px */
-  	padding:0.75rem 1rem;         	/* 12px ; 16px */
-  	font-size:1.125rem;           	/* 18px */
-  	font-weight:700;
-	text-decoration:none;
-	white-space:normal;
-  	background-color:var(--button-background,transparent);
-	color:var(--button-text,#000000);
-	border:var(--button-border,none);
-	border-radius:0.5rem;
-	cursor:pointer;
-	box-sizing:border-box;
-	hyphens:auto;               	/* Delete this to remove automatic hyphen on line break */
-  	margin-bottom:1rem;
-	text-align:center;
-	line-height:1.3;
-}
-
-/* Icons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.icon {
-	width:1.25rem;
-	height:1.25rem;
-	margin-right:0.5rem;
-	flex-shrink:0;
-}
-
-/* Avatar
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.avatar {
-	width: 8rem;             /* 128px */
-	height: 8rem;
-	object-fit: cover;
-	background-position: center;
-	margin-bottom: var(--spacing-l);
-  }
-
-   /* Modifier for no avatar rounding */
-   .avatar--none {
-	border-radius: 0%;
-  }
-
-  /* Modifier for rounded avatar */
-  .avatar--rounded {
-	border-radius: 50%;
-  }
-
-  /* Modifier for slightly rounded corners */
-  .avatar--soft {
-	border-radius: 0.5rem;   /* 8px rounded corners */
-  }
-
-/* Theme System
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Light theme is default above */
-
-/* Dark theme */
-:root.theme-dark {
-	color-scheme:dark;
-}
-:root.theme-dark :focus-visible {
-	outline: 2px solid #4899F7;
-	outline-offset: 2px;
-  }
-:root.theme-dark body {
-	background-color:#121212;
-	color:#ffffff;
-}
-:root.theme-dark a:not(.button) {
-	color:#4899F7;
-}
-:root.theme-dark a:not(.button):hover {
-	color:#7AB8FF;
-}
-
-/* Auto theme */
-:root.theme-auto {
-	color-scheme:light dark;
-}
-@media (prefers-color-scheme:dark) {
-	:root.theme-auto body {
-	background-color:#121212;
-	color:#ffffff;
-}
-:root.theme-auto :focus-visible {
-    outline: 2px solid #4899F7;
-    outline-offset: 2px;
-  }
-:root.theme-auto a:not(.button) {
-	color:#4899F7;
-}
-:root.theme-auto a:not(.button):hover {
-	color:#7AB8FF;
-}
-}
-
-/* Button Text Color Override
-    –––––––––––––––––––––––––––––––––––––––––––––––––– */
-    .button:hover,button:hover {
-	color:var(--button-text);
-}
-
-/* Responsive Typography
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  @media (max-width:34.375rem) {            /* 550px */
-    h1 {
-	font-size:2rem;                         /* 32px */
-	}
-	body {
-	font-size:1rem;                    		/* 16px */
-	}
-}
-
-/* Privacy Page Styles
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-nav {
-	margin:var(--spacing-l) 0;
-	text-align:left;
-}
-section {
-	margin:var(--spacing-xl) 0;
-	text-align:left;
-}
-h2 {
-	font-size:var(--scale-3);
-	font-weight:700;
-	margin-bottom:var(--spacing-m);
-}
-h3 {
-	font-size:var(--scale-2);
-	font-weight:600;
-	margin:var(--spacing-l) 0 var(--spacing-s) 0;
-}
-ul {
-	list-style:none;
-	padding:0;
-	margin:0 0 var(--spacing-m) 0;
-}
-ul li {
-	margin-bottom:var(--spacing-xs);
-}
-
-/* Privacy page specific responsive adjustments */
-  @media (max-width:34.375rem) {
-	h2 {
-	font-size:var(--scale-2);
-	}
-	h3 {
-	font-size:var(--scale-1);
-	}
-	section {
-	margin:var(--spacing-l) 0;
-	}
-}
-
-/* Font Face Definitions
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@font-face {
-	font-display:swap;
-	font-family:'Open Sans';
-	font-style:normal;
-	font-weight:400;
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot');
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.svg#OpenSans') format('svg');
-}
-@font-face {
-	font-display:swap;
-	font-family:'Open Sans';
-	font-style:normal;
-	font-weight:600;
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.eot');
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.svg#OpenSans') format('svg');
-}
-@font-face {
-	font-display:swap;
-	font-family:'Open Sans';
-	font-style:normal;
-	font-weight:700;
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.eot');
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.svg#OpenSans') format('svg');
-}
-@font-face {
-	font-display:swap;
-	font-family:'Open Sans';
-	font-style:normal;
-	font-weight:800;
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot');
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.svg#OpenSans') format('svg');
-}
-/* Global Styles */
+/* Base Styles */
 :root {
 	--neon-blue: #00eaff;
 	--dark-bg: #0a0f1e;
@@ -388,16 +6,67 @@ ul li {
 	--button-glow: #00eaff;
 	--glass: rgba(255, 255, 255, 0.1);
 	--border-glass: rgba(255, 255, 255, 0.3);
+	--scale-0: 1rem;           /* 16px */
+	--scale-1: 1.25rem;        /* 20px */
+	--scale-2: 1.563rem;       /* 25px */
+	--scale-3: 1.953rem;       /* 31px */
+	--scale-4: 2.441rem;       /* 39px */
+	--scale-5: 3.052rem;       /* 49px */
+	--spacing-xs: 0.5rem;      /* 8px */
+	--spacing-s: 1rem;         /* 16px */
+	--spacing-m: 1.5rem;       /* 24px */
+	--spacing-l: 2rem;         /* 32px */
+	--spacing-xl: 3rem;        /* 48px */
+	--spacing-xxl: 4rem;       /* 64px */
 }
 
 body {
+	margin: 0;
+	padding: 0;
 	background: radial-gradient(circle, #0a0f1e, #050a13);
 	color: var(--light-gray);
 	font-family: 'Orbitron', sans-serif;
 	text-align: center;
+
 }
 
-/* Avatar with Neon Glow */
+/* Container */
+.container {
+	max-width: 800px;
+	min-height: 100vh;
+	margin: auto;
+	padding: var(--spacing-xl) var(--spacing-m) 0 var(--spacing-m);
+	background: rgba(10, 15, 30, 0.85);
+	border: 4px solid var(--neon-blue);
+	box-shadow: 0 0 20px var(--neon-blue);
+	border-radius: 15px;
+	backdrop-filter: blur(10px);
+	animation: neon-pulse 1.5s infinite alternate;
+}
+
+@keyframes neon-pulse {
+	0% { box-shadow: 0 0 10px var(--neon-blue); }
+	100% { box-shadow: 0 0 20px var(--neon-blue); }
+}
+
+/* Typography */
+h1 {
+	margin: 0 0 var(--spacing-m) 0;
+	font-size: var(--scale-5);
+	font-weight: 800;
+	line-height: 1.1;
+	letter-spacing: -0.02em;
+	color: var(--neon-blue);
+	text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+}
+
+p {
+	margin: 0 0 var(--spacing-xl) 0;
+	font-size: var(--scale-1);
+	line-height: 1.6;
+}
+
+/* Avatar */
 .avatar {
 	width: 10rem;
 	height: 10rem;
@@ -405,36 +74,32 @@ body {
 	object-fit: cover;
 	background: var(--glass);
 	box-shadow: 0px 0px 10px var(--neon-blue);
+	margin: 0 auto var(--spacing-l) auto; /* Centered horizontally */
+	display: block; /* Ensures the avatar is centered */
 	transition: transform 0.3s ease-in-out;
 }
+
 .avatar:hover {
 	transform: scale(1.1);
 }
 
-/* Title Glitch Effect */
-.glitch {
-	font-size: 3rem;
-	text-transform: uppercase;
-	color: var(--neon-blue);
-	text-shadow: 0px 0px 5px var(--neon-blue), 0px 0px 15px var(--neon-blue);
-	animation: glitch 1.5s infinite alternate;
-}
-
-/* Glitch Keyframes */
-@keyframes glitch {
-	0% { text-shadow: 0px 0px 5px var(--neon-blue), 0px 0px 15px var(--neon-blue); }
-	100% { text-shadow: 0px 0px 10px var(--neon-blue), 0px 0px 25px var(--neon-blue); }
-}
-
-/* Futuristic Glass Buttons */
-.button {
+/* Button Stack */
+.button-stack {
 	display: flex;
+	flex-direction: column;
+	align-items: center; /* Centers buttons horizontally */
+	gap: var(--spacing-s); /* Adds spacing between buttons */
+}
+
+/* Buttons */
+.button {
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 20rem;
+	width: 18.75rem;
 	min-height: 3rem;
-	padding: 0.75rem;
-	font-size: 1.2rem;
+	padding: 0.75rem 1rem;
+	font-size: 1.125rem;
 	font-weight: 700;
 	background: var(--glass);
 	color: var(--neon-blue);
@@ -443,9 +108,9 @@ body {
 	backdrop-filter: blur(10px);
 	box-shadow: 0px 0px 10px var(--neon-blue);
 	text-decoration: none;
-	margin: 10px auto;
 	transition: all 0.3s ease-in-out;
 }
+
 .button:hover {
 	background: var(--neon-blue);
 	color: #000;
@@ -460,215 +125,35 @@ body {
 	margin-right: 0.5rem;
 }
 
+.white-icon {
+	filter: brightness(0) invert(1);
+}
+
 /* Footer */
 footer {
-	margin-top: 2rem;
-	font-size: 0.9rem;
+	margin-top: var(--spacing-xxl);
+	font-size: var(--scale-0);
 	color: var(--neon-blue);
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-	.glitch {
-		font-size: 2rem;
-	}
-	.button {
-		width: 16rem;
-		font-size: 1rem;
-	}
-}
-/* Circuit Background Animation */
-@keyframes pulse-circuit {
-	0% { background-position: 0 0; }
-	50% { background-position: -50px -50px; }
-	100% { background-position: 0 0; }
-}
-
-body {
-	background: url('images/circuit-pattern.png'); /* Replace with your circuit image */
-	background-size: cover;
-	animation: pulse-circuit 5s infinite alternate linear;
-}
-
-/* Neon Framed Container */
-.container {
-	max-width: 800px;
-	margin: auto;
-	padding: 2rem;
-	background: rgba(10, 15, 30, 0.85); /* Glass effect */
-	border: 4px solid var(--neon-blue);
-	box-shadow: 0 0 20px var(--neon-blue);
-	border-radius: 15px;
-	backdrop-filter: blur(10px);
-	animation: neon-pulse 1.5s infinite alternate;
-}
-
-/* Pulsing Neon Animation */
-@keyframes neon-pulse {
-	0% { box-shadow: 0 0 10px var(--neon-blue); }
-	100% { box-shadow: 0 0 20px var(--neon-blue); }
-}
-
-/* 🔹 Futuristic Holographic Background */
-body {
-	background: radial-gradient(circle at center, rgba(10, 10, 20, 0.95) 10%, rgba(5, 5, 15, 1) 50%, black 100%);
-	color: #00eaff;
-	font-family: 'Orbitron', sans-serif;
-	overflow: hidden;
-}
-
-/* 🔹 Animated Circuit Board Overlay */
-body::before {
-	content: "";
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: url('images/circuit-animated.gif'); /* Subtle electric flow effect */
-	opacity: 0.15;
-	animation: flicker 2s infinite alternate;
-}
-
-/* 🔹 CRT Flicker & Scanlines */
-body::after {
-	content: "";
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(rgba(0, 0, 0, 0.05) 50%, rgba(255, 255, 255, 0.02) 50%);
-	background-size: 100% 4px;
-	opacity: 0.2;
-	pointer-events: none;
-	animation: scanlines 0.3s infinite linear;
-}
-
-@keyframes scanlines {
-	0% { background-position: 0 0; }
-	100% { background-position: 0 4px; }
-}
-
-/* 🔹 Glassmorphic Neon Container */
-.container {
-	max-width: 850px;
-	margin: auto;
-	padding: 2rem;
-	background: rgba(15, 15, 30, 0.8);
-	border: 3px solid #00eaff;
-	border-radius: 20px;
-	box-shadow: 0 0 30px #00eaff;
-	backdrop-filter: blur(12px);
-	animation: pulseGlow 1.5s infinite alternate;
-	transition: transform 0.3s ease-in-out;
-}
-
-/* 🔹 3D Floating Effect */
-.container:hover {
-	transform: perspective(1000px) rotateY(5deg) scale(1.02);
-}
-
-@keyframes pulseGlow {
-	0% { box-shadow: 0 0 10px #00eaff; }
-	100% { box-shadow: 0 0 40px #00eaff; }
-}
-
-/* 🔹 Glitching Holographic Title */
-h1.glitch {
-	font-size: 3rem;
-	text-align: center;
-	position: relative;
-	color: #00eaff;
-	text-shadow: 0 0 10px #00eaff, 0 0 30px #00eaff;
-	animation: glitchEffect 1.2s infinite alternate;
-	cursor: pointer;
-}
-
-@keyframes glitchEffect {
-	0% { text-shadow: 0 0 10px #00eaff; transform: skewX(0); }
-	50% { text-shadow: -2px 0 10px #ff00ff, 2px 0 20px #ff00ff; transform: skewX(8deg); }
-	100% { text-shadow: 0 0 10px #00eaff; transform: skewX(0); }
-}
-
-/* 🔹 Hologram Title Hack Effect */
-h1.glitch:active {
-	animation: hackGlitch 0.8s ease-out;
-}
-
-@keyframes hackGlitch {
-	0% { text-shadow: 0 0 20px #ff00ff, 0 0 50px #ff00ff; }
-	100% { text-shadow: 0 0 10px #00eaff; }
-}
-
-/* 🔹 Cyberpunk Neon Buttons */
-.button-glow {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 5px;
-	padding: 12px 20px;
-	border: 2px solid #00eaff;
-	background: rgba(0, 0, 0, 0.4);
-	border-radius: 10px;
-	box-shadow: 0 0 20px #00eaff;
-	color: #00eaff;
-	text-decoration: none;
-	font-weight: bold;
-	text-transform: uppercase;
-	transition: all 0.3s ease-in-out;
-	position: relative;
-	overflow: hidden;
-}
-
-/* 🔹 Glitch Hover Effect */
-.button-glow:hover {
-	background: #00eaff;
-	color: black;
-	box-shadow: 0 0 40px #00eaff;
-	transform: scale(1.1);
-}
-
-.button-glow::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: -100%;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-	transition: all 0.5s ease-in-out;
-}
-
-.button-glow:hover::after {
-	left: 100%;
-}
-
-/* 🔹 Footer Neon Glow */
-footer {
-	text-align: center;
-	margin-top: 20px;
-	font-size: 0.9rem;
-	color: rgba(255, 255, 255, 0.6);
-}
-
 footer a {
-	color: #00eaff;
+	color: var(--neon-blue);
 	text-decoration: none;
 	transition: all 0.3s ease-in-out;
 }
 
 footer a:hover {
-	text-shadow: 0 0 10px #00eaff;
+	text-shadow: 0 0 10px var(--neon-blue);
 }
-.white-icon {
-	filter: brightness(0) invert(1); /* Makes dark icons white */
-}
-.title {
-	font-size: 2.5rem;
-	font-weight: bold;
-	color: #0ff; /* Neon Cyan */
-	text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px rgba(0, 255, 255, 0.8);
-	letter-spacing: 2px;
-	text-transform: uppercase;
+
+/* Responsive Design */
+@media (max-width: 34.375rem) {
+	h1 {
+		font-size: var(--scale-4);
+	}
+
+	.button {
+		width: 16rem;
+		font-size: 1rem;
+	}
 }
